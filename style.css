@@ -1,0 +1,45 @@
+:root {
+  --square-color: #cbd5e1;
+  --square-size: min(60vh, 80vw);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+}
+
+body {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  height: var(--square-size);
+  width: var(--square-size);
+  gap: 8px;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.square {
+  background-color: var(--square-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.square div {
+  font-size: calc(var(--square-size) / 6);
+}
